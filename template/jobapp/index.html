@@ -11,8 +11,7 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-md-12">
         <div class="mb-5 text-center">
-          <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+          <h1 class="text-white font-weight-bold">The Easiest Way To Get Everything You Want</h1>
         </div>
         <form method="GET" action="{% url 'jobapp:search_result' %}" class="search-jobs-form">
           {% include 'jobapp/search.html' %}
@@ -31,9 +30,8 @@
   <div class="container">
     <div class="row mb-5 justify-content-center">
       <div class="col-md-7 text-center">
-        <h2 class="section-title mb-2 text-white">DJobPortal Stats</h2>
-        <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde officiis
-          recusandae sequi excepturi corrupti.</p>
+        <h2 class="section-title mb-2 text-white">Posts Stats</h2>
+        <p class="lead text-white">Largest online MarketPlace in the world</p>
       </div>
     </div>
     <div class="row pb-0 block__19738 section-counter">
@@ -42,7 +40,7 @@
         <div class="d-flex align-items-center justify-content-center mb-2">
           <strong class="number" data-number="{{ total_candidates }}">0</strong>
         </div>
-        <span class="caption">Candidates</span>
+        <span class="caption">Sellers</span>
       </div>
 
       <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
@@ -63,7 +61,7 @@
         <div class="d-flex align-items-center justify-content-center mb-2">
           <strong class="number" data-number="{{ total_companies }}">0</strong>
         </div>
-        <span class="caption">Companies</span>
+        <span class="caption">Buyers</span>
       </div>
 
 
@@ -102,15 +100,15 @@
           <div class="job-listing-meta">
             {% if job.job_type == '1' %}
             <span class="badge badge-success">
-              Full Time
+              Product
             </span>
             {% elif job.job_type == '2'%}
             <span class="badge badge-danger">
-              Part Time
+              Service
             </span>
             {% else  %}
             <span class="badge badge-info">
-              Internship
+              Job
             </span>
             {% endif %}
           </div>
@@ -140,7 +138,7 @@
     {% elif request.user.role == "employee" %}
     <div class="row align-items-center">
       <div class="col-md-8">
-        <h2 class="text-white">Looking For A Job?</h2>
+        <h2 class="text-white">Looking For Something ?</h2>
         <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
           impedit.</p>
       </div>
@@ -151,9 +149,8 @@
     {% else %}
     <div class="row align-items-center">
       <div class="col-md-8">
-        <h2 class="text-white">Looking For A Job?</h2>
-        <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
-          impedit.</p>
+        <h2 class="text-white">Looking For Something?</h2>
+        <p class="mb-0 text-white lead">Join the biggest community of Sellers and Buyers</p>
       </div>
       <div class="col-md-3 ml-auto">
         <a href="{% url 'account:employee-registration' %}" class="btn btn-warning btn-block btn-lg">Sign Up</a>
@@ -246,17 +243,17 @@ $("#ajax_listing_paginattion" ).delegate( "a#ajax_paginator", "click", function(
                                   ${ job.job_type == '1'
                                   ?  
                                   `<span class="badge badge-success">
-                                    Full Time
+                                    Product
                                   </span>`
                                   : 
                                   job.job_type == '2' 
                                   ?  
                                   `<span class="badge badge-danger">
-                                    Part Time
+                                    Service
                                   </span>` 
                                   :
                                   `<span class="badge badge-info">
-                                    Internship
+                                    Job
                                   </span>
                                   `
                                   }

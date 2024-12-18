@@ -10,7 +10,7 @@ Other Changes:
 
 Other Changes:
 
-*   Updated year and company name in license headers.
+*   Updated year and First Name in license headers.
 
 ## ckeditor4-plugin-exportpdf 1.0.4
 

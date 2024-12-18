@@ -19,18 +19,18 @@ class JobForm(forms.ModelForm):
         self.fields['description'].label = "Job Description :"
         self.fields['tags'].label = "Tags :"
         self.fields['last_date'].label = "Submission Deadline :"
-        self.fields['company_name'].label = "Company Name :"
+        self.fields['company_name'].label = "First Name :"
         self.fields['url'].label = "Website :"
 
 
         self.fields['title'].widget.attrs.update(
             {
-                'placeholder': 'eg : Software Developer',
+                'placeholder': 'eg : Headphones',
             }
         )        
         self.fields['location'].widget.attrs.update(
             {
-                'placeholder': 'eg : Bangladesh',
+                'placeholder': 'eg : Lahore, Punjab',
             }
         )
         self.fields['salary'].widget.attrs.update(
@@ -51,7 +51,7 @@ class JobForm(forms.ModelForm):
         )        
         self.fields['company_name'].widget.attrs.update(
             {
-                'placeholder': 'Company Name',
+                'placeholder': 'First Name',
             }
         )           
         self.fields['url'].widget.attrs.update(
@@ -126,7 +126,7 @@ class JobEditForm(forms.ModelForm):
         self.fields['description'].label = "Job Description :"
         # self.fields['tags'].label = "Tags :"
         self.fields['last_date'].label = "Dead Line :"
-        self.fields['company_name'].label = "Company Name :"
+        self.fields['company_name'].label = "First Name :"
         self.fields['url'].label = "Website :"
 
 
@@ -157,7 +157,7 @@ class JobEditForm(forms.ModelForm):
         )        
         self.fields['company_name'].widget.attrs.update(
             {
-                'placeholder': 'Company Name',
+                'placeholder': 'First Name',
             }
         )           
         self.fields['url'].widget.attrs.update(

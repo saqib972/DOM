@@ -9,9 +9,9 @@ from taggit.managers import TaggableManager
 
 
 JOB_TYPE = (
-    ('1', "Full time"),
-    ('2', "Part time"),
-    ('3', "Internship"),
+    ('1', "Product"),
+    ('2', "Service"),
+    ('3', "Job"),
 )
 
 class Category(models.Model):

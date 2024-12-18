@@ -42,11 +42,11 @@
                 <span class="text-primary">
 
                   {% if job.job_type == '1' %}
-                  Full Time
+                  Product
                   {% elif job.job_type == '2'%}
-                  Part Time
+                  Service
                   {% else  %}
-                  Internship
+                  Job
                   {% endif %}
                 </span>
               </span>
@@ -201,11 +201,11 @@
             <li class="mb-2"><strong class="text-black">Published on:</strong> {{ job.timestamp|date:"d M Y" }}</li>
             <li class="mb-2"><strong class="text-black">Employment Status:</strong>
               {% if job.job_type == '1' %}
-              Full Time
+              Product
               {% elif job.job_type == '2'%}
-              Part Time
+              Service
               {% else  %}
-              Internship
+              Job
               {% endif %}
             </li>
             <li class="mb-2"><strong class="text-black">Job Location:</strong> {{ job.location }}</li>
@@ -259,11 +259,11 @@
           <div class="job-listing-meta">
             <span class="badge badge-danger">
               {% if job.job_type == '1' %}
-              Full Time
+              Product
               {% elif job.job_type == '2'%}
-              Part Time
+              Service
               {% else  %}
-              Internship
+              Job
               {% endif %}
             </span>
           </div>

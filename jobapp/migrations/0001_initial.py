@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=300)),
                 ('description', models.TextField()),
                 ('location', models.CharField(max_length=300)),
-                ('job_type', models.CharField(choices=[('1', 'Full time'), ('2', 'Part time'), ('3', 'Internship')], max_length=1)),
+                ('job_type', models.CharField(choices=[('1', 'Product'), ('2', 'Service'), ('3', 'Job')], max_length=1)),
                 ('salary', models.IntegerField(blank=True)),
                 ('company_name', models.CharField(max_length=300)),
                 ('company_description', models.CharField(max_length=50)),
