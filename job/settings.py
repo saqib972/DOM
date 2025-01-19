@@ -25,6 +25,7 @@ SECRET_KEY = 'etdq)uvq=t0rc&ams5_ovn6w8bcwknjj0u97*(#n^(76x*+dr1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['127.0.0.1:8000, djobportal.herokuapp.com']
 
@@ -83,26 +84,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'job.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'jobportal',
-#         'USER': 'postgres',
-#         'PASSWORD': '1234',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'jobportal',  # The name of your MySQL database
+        'USER': 'django_user',  # The MySQL username
+        'PASSWORD': 'admin123',  # The MySQL password
+        'HOST': '127.0.0.1',  # Use 'localhost' or '127.0.0.1'
+        'PORT': '3306',  # Default MySQL port
     }
 }
+
+#DATABASES = {
+#    'default': {
+ #       'ENGINE': 'django.db.backends.sqlite3',
+  #      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 #for debug toolbar
 INTERNAL_IPS = [
     # ...

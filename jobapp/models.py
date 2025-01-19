@@ -22,7 +22,7 @@ class Category(models.Model):
     
 
 class Job(models.Model):
-
+    id = models.BigAutoField(primary_key=True)
     user = models.ForeignKey(User, related_name='User', on_delete=models.CASCADE) 
     title = models.CharField(max_length=300)
     description = RichTextField()
@@ -46,7 +46,7 @@ class Job(models.Model):
  
 
 class Applicant(models.Model):
-
+    id = models.BigAutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -59,7 +59,7 @@ class Applicant(models.Model):
   
 
 class BookmarkJob(models.Model):
-
+    id = models.BigAutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now=True, auto_now_add=False)
